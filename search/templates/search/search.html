@@ -1,12 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+
 <main class="main pt-1">
-  <div class="container pt-2">
-  <h2>SEARCH ECH-ENGINE</h2>
-</div>
 <div class="container" style="background-color:white;" >
-  <form method="GET" action="search" class="container pt-3">
+  <form method="GET"  class="container pt-3">
     <!-- <div class="input-group"> -->
       <div class="form-outline">
         <input id="search-focus" type="text" name="search" class="form-control border border-info" placeholder="Search" />
@@ -25,14 +23,17 @@
 {% if final_result %}
 <b>Web Results</b>
 <br>
+<br>
 {% for result in final_result %}
 <div class="container-fluid">
-    <h3 style="color: blue;"><a href="{{ result.1 }}">{{ result.0 }}</a></h3>
-    <h3 style="color: green;">{{ result.1 }}</h3>
-    <h3>{{ result.2 }}</h3>
+    <h5 style="color: blue;"><a href="{{ result.1 }}" target="_blank">{{ result.0 }}</a></h5>
+    <h5 style="color: green;">{{ result.1 }}</h5>
+    <h5>{{ result.2 }}</h5>
 </div>
+<br>
 {% endfor %}
 {% endif %}
 </div>
 </main>
+
 {% endblock %}
