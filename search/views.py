@@ -28,7 +28,8 @@ def search(request):
             final_result.append((result_title, result_url, result_desc))
 
         context = {
-            'final_result': final_result
+            'search': search,
+            'final_result': final_result,
         }
 
         return render(request, 'search/search.html', context)

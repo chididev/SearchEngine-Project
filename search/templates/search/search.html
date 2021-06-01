@@ -22,9 +22,8 @@
 <br>
 <div class="container-fluid">
 {% if final_result %}
-<b>Web Results</b>
-<br>
-<br>
+<h4>Web results for: {{ search }}</h4>
+<hr>
 {% for result in final_result %}
 <div class="container-fluid">
     <h5 style="color: blue;"><a href="{{ result.1 }}" target="_blank">{{ result.0 }}</a></h5>
