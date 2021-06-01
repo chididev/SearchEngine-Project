@@ -1,16 +1,14 @@
 from django.shortcuts import render
 from django.core.paginator import Paginator
-from django.views.decorators.csrf import csrf_exempt
 from bs4 import BeautifulSoup as bs
 import requests
 
 
 # Create your views here.
-@csrf_exempt
 def home(request):
     return render(request, 'search/home.html')
 
-@csrf_exempt
+
 def search(request):
     if request.method == 'GET':
         search = request.GET['search']

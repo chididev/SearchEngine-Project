@@ -5,6 +5,7 @@
 <main class="main pt-1">
 <div class="container" style="background-color:white;" >
   <form method="GET"  class="container pt-3">
+    {% csrf_token %}
     <!-- <div class="input-group"> -->
       <div class="form-outline">
         <input id="search-focus" type="text" name="search" class="form-control border border-info" placeholder="Search" />
